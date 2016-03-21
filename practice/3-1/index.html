@@ -21,7 +21,11 @@
 		</div>
 		<footer>copyright NexSeed. All rights reserved.</footer>
 		<script>
-			console.log(window.confirm('ゲーム開始！Are you ready?'));
+			if (window.confirm('ゲーム開始！Are you ready?')) {
+				console.log('ゲームを開始します');
+			} else {
+				console.log('ゲームを終了します');
+			}
 		</script>
 	</body>
 </html>
