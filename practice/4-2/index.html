@@ -33,7 +33,15 @@
 			var hour = now.getHours();
 			var min = now.getMinutes();
 
-			var output = year + '/' + month + '/' + date + ' ' + hour + ':' + min;
+			// 24時間表記ではなく、12時間表記にしてみる
+			var ampm = '';
+			if (hour < 12) {
+				ampm = 'a.m.';
+			}else {
+				ampm = 'p.m.';
+			}
+
+			var output = year + '/' + month + '/' + date + ' ' + (hour % 12) + ':' + min + ampm;
 			// 現在日時を出力
 			document.getElementById('time').textContent = output;
 		</script>
