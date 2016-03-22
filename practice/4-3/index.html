@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<title>template</title>
+		<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="header-contents">
+			<h1>タイトル</h1>
+			<h2>サブタイトル</h2>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<section>
+				
+			</section>
+		</div>
+		<footer>copyright NexSeed. All rights reserved.</footer>
+		<script>
+			// num: 加工する数値 digit: 整形する桁数
+			var addZero = function(num, digit) {
+				// 受け取ったnumを文字列（String）に変換
+				var numString = String(num);
+				// 先頭に0を付ける（digitで指定された桁数になるまで繰り返す）
+				while(numString.length < digit) {
+					numString = '0' + numString;
+				}
+				return numString;
+			};
+			console.log(addZero(5, 3));
+		</script>
+	</body>
+</html>
