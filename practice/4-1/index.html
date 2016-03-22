@@ -18,15 +18,23 @@
 			<section>
 				<!-- formタグを追加 -->
 				<form action="#" id="form">
+					<!-- 入力フォームを追加 -->
+					<input type="text" name="word">
 					<input type="submit" value="検索">
 				</form>
+				<!-- ここに出力 -->
+				<p id="output"></p>
 			</section>
 		</div>
 		<footer>copyright NexSeed. All rights reserved.</footer>
 		<script>
 			// formのsubmitボタンをクリックした時に処理する
 			document.getElementById('form').onsubmit = function() {
-				console.log('クリックされました');
+				// 入力フォームの値を取得し、HTMLに出力する
+				var search = document.getElementById('form').word.value;
+				document.getElementById('output').textContent = search + 'の検索中...';
+				// formがsubmitされた時、データを送信する処理をキャンセルする（再読み込みをキャンセルする）
+				return false;
 			};
 		</script>
 	</body>
